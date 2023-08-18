@@ -31,6 +31,9 @@ require("formatter").setup({
 		vue = {
 			require("formatter.defaults").prettierd,
 		},
+		rust = {
+			require("formatter.filetypes.rust").rustfmt,
+		},
 	},
 })
 
