@@ -13,7 +13,11 @@ return require("packer").startup(function(use)
 
 	use("rebelot/kanagawa.nvim")
 
-	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		requires = { { "JoosepAlviste/nvim-ts-context-commentstring" } },
+		run = ":TSUpdate",
+	})
 
 	use({
 		"folke/trouble.nvim",
@@ -79,9 +83,10 @@ return require("packer").startup(function(use)
 		requires = { "nvim-treesitter/nvim-treesitter" },
 		config = function()
 			require("treesj").setup({--[[ your config ]]
-                use_default_keymaps = true,
+				use_default_keymaps = true,
 			})
 		end,
 	})
-    use({"lewis6991/gitsigns.nvim"})
+	use({ "lewis6991/gitsigns.nvim" })
+	use({ "numToStr/Comment.nvim" })
 end)
