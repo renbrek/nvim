@@ -73,4 +73,15 @@ return require("packer").startup(function(use)
 	use({ "theprimeagen/harpoon" })
 	use({ "mbbill/undotree" })
 	use({ "tpope/vim-fugitive" })
+	use({ "f-person/git-blame.nvim" })
+	use({
+		"Wansmer/treesj",
+		requires = { "nvim-treesitter/nvim-treesitter" },
+		config = function()
+			require("treesj").setup({--[[ your config ]]
+                use_default_keymaps = true,
+			})
+		end,
+	})
+    use({"lewis6991/gitsigns.nvim"})
 end)
