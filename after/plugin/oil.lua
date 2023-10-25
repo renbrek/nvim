@@ -5,7 +5,7 @@ require("oil").setup({
 		-- ["<C-s>"] = "actions.select_vsplit",
 		-- ["<C-h>"] = "actions.select_split",
 		-- ["<leader>t"] = "actions.select_tab",
-		-- ["<leader>pr"] = "actions.preview",
+		["<leader>pv"] = "actions.preview",
 		["<C-c>"] = "actions.close",
 		["<C-l>"] = "actions.refresh",
 		["-"] = "actions.parent",
@@ -18,4 +18,4 @@ require("oil").setup({
 	},
     use_default_keymaps = false,
 })
-vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

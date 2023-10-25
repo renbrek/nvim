@@ -1,3 +1,3 @@
 require('renbrek.remap')
-require('renbrek.packer')
+require('renbrek.plugins')
 require('renbrek.set')
